@@ -499,8 +499,17 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.strokeStyle = BrushColor;
 
         const rect = Canvas.getBoundingClientRect();
-        const x = Event.clientX - rect.left;
-        const y = Event.clientY - rect.top;
+
+        if (window.innerWidth > 800) {
+            const x = Event.clientX - rect.left;
+            const y = Event.clientY - rect.top;
+        }
+
+        else {
+            const x = Event.touches[0].clientX;
+            const y = Event.touches[0].clientY;
+        }
+        
 
         ctx.lineTo(1/0.75 * x, 1/0.75 * y); // 1/0.75 because canvas scale is 75%
         ctx.stroke();
