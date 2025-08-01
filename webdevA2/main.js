@@ -1,6 +1,5 @@
 // hamburger
 const HamburgerMenu = document.querySelector(".HamburgerMenu");
-const HamburgerMenuItem = document.querySelectorAll(".HamburgerMenuItem");
 const HamburgerMenuButton = document.querySelector(".HamburgerMenuButton");
 const HamburgerMenuButtonIconOpen = document.querySelector("#HamburgerMenuButtonIconOpen");
 const HamburgerMenuButtonIconClose = document.querySelector("#HamburgerMenuButtonIconClose");
@@ -45,8 +44,8 @@ function ShowHumanAnatomySection() {
     switch (CurrentHumanAnatomySectionNumber) {
         case 1:
             HumanAnatomySection1.style.display = "block";
-            HumanAnatomySection1.classList.add('HumanAnatomyStartAnimation')
-            HumanAnatomySection2.style.display = "none"
+            HumanAnatomySection1.classList.add('HumanAnatomyStartAnimation');
+            HumanAnatomySection2.style.display = "none";
             HumanAnatomySection2.classList.remove('HumanAnatomyStartAnimation');
             HumanAnatomySection3.style.display = "none";
             HumanAnatomySection3.classList.remove('HumanAnatomyStartAnimation');
@@ -54,20 +53,20 @@ function ShowHumanAnatomySection() {
 
         case 2:
             HumanAnatomySection1.style.display = "none";
-            HumanAnatomySection1.classList.remove('HumanAnatomyStartAnimation')
+            HumanAnatomySection1.classList.remove('HumanAnatomyStartAnimation');
             HumanAnatomySection2.style.display = "block";
-            HumanAnatomySection2.classList.add('HumanAnatomyStartAnimation')
+            HumanAnatomySection2.classList.add('HumanAnatomyStartAnimation');
             HumanAnatomySection3.style.display = "none";
-            HumanAnatomySection3.classList.remove('HumanAnatomyStartAnimation')
+            HumanAnatomySection3.classList.remove('HumanAnatomyStartAnimation');
             break;
 
         case 3:
             HumanAnatomySection1.style.display = "none";
-            HumanAnatomySection1.classList.remove('HumanAnatomyStartAnimation')
+            HumanAnatomySection1.classList.remove('HumanAnatomyStartAnimation');
             HumanAnatomySection2.style.display = "none";
-            HumanAnatomySection2.classList.remove('HumanAnatomyStartAnimation')
+            HumanAnatomySection2.classList.remove('HumanAnatomyStartAnimation');
             HumanAnatomySection3.style.display = "block";
-            HumanAnatomySection3.classList.add('HumanAnatomyStartAnimation')
+            HumanAnatomySection3.classList.add('HumanAnatomyStartAnimation');
             break;
 
         default:
@@ -87,7 +86,7 @@ HumanAnatomySection1Button.addEventListener("click", function () {
     }
 
     ShowHumanAnatomySection();
-})
+});
 
 // go next
 HumanAnatomySection2Button.addEventListener("click", function () {
@@ -97,7 +96,7 @@ HumanAnatomySection2Button.addEventListener("click", function () {
     }
 
     ShowHumanAnatomySection();
-})
+});
 
 
 
@@ -116,16 +115,16 @@ let CurrentHumanAnatomySectionImageNumber = 2;
 setInterval(function () {
     switch (CurrentHumanAnatomySectionImageNumber) {
         case 1:
-            HumanAnatomyImage1.style.display = "inline-block";
-            HumanAnatomyImage2.style.display = "none";
+            HumanAnatomySection1Image1.style.display = "inline-block";
+            HumanAnatomySection1Image2.style.display = "none";
             break;
         case 2:
-            HumanAnatomyImage1.style.display = "none";
-            HumanAnatomyImage2.style.display = "inline-block";
+            HumanAnatomySection1Image1.style.display = "none";
+            HumanAnatomySection1Image2.style.display = "inline-block";
             break;
         default:
-            HumanAnatomyImage1.style.display = "inline-block";
-            HumanAnatomyImage2.style.display = "none";
+            HumanAnatomySection1Image1.style.display = "inline-block";
+            HumanAnatomySection1Image2.style.display = "none";
     }
     CurrentHumanAnatomySectionImageNumber++;
     if (CurrentHumanAnatomySectionImageNumber > 2) {
@@ -192,22 +191,22 @@ let ShowExample = false;
 
 DynamicPosesSection1Button.addEventListener("click", function () {
     DynamicPosesSection1.style.display = "block";
-    DynamicPosesSection1.classList.add('DynamicPosesStartAnimation')
-    DynamicPosesSection1Button.classList.add('EnabledButton')
+    DynamicPosesSection1.classList.add('DynamicPosesStartAnimation');
+    DynamicPosesSection1Button.classList.add('EnabledButton');
 
     DynamicPosesSection2.style.display = "none";
-    DynamicPosesSection2.classList.remove('DynamicPosesStartAnimation')
-    DynamicPosesSection2Button.classList.remove('EnabledButton')
+    DynamicPosesSection2.classList.remove('DynamicPosesStartAnimation');
+    DynamicPosesSection2Button.classList.remove('EnabledButton');
 });
 
 DynamicPosesSection2Button.addEventListener("click", function () {
     DynamicPosesSection1.style.display = "none";
-    DynamicPosesSection1.classList.remove('DynamicPosesStartAnimation')
-    DynamicPosesSection1Button.classList.remove('EnabledButton')
+    DynamicPosesSection1.classList.remove('DynamicPosesStartAnimation');
+    DynamicPosesSection1Button.classList.remove('EnabledButton');
 
     DynamicPosesSection2.style.display = "block";
-    DynamicPosesSection2.classList.add('DynamicPosesStartAnimation')
-    DynamicPosesSection2Button.classList.add('EnabledButton')
+    DynamicPosesSection2.classList.add('DynamicPosesStartAnimation');
+    DynamicPosesSection2Button.classList.add('EnabledButton');
 
 });
 
@@ -220,26 +219,25 @@ DynamicPosesSectionExampleButton.addEventListener("click", function () {
     if (ShowExample == false) {
         for (let i = 0; i < DynamicPosesSectionExample.length; i++) {
             DynamicPosesSectionExample[i].style.display = "block";
-            DynamicPosesSectionExample[i].classList.add('DynamicPosesExampleStartAnimation')
+            DynamicPosesSectionExample[i].classList.add('DynamicPosesExampleStartAnimation');
         }
-        DynamicPoses.classList.add('DynamicPosesExtendAnimation')
+        DynamicPoses.classList.add('DynamicPosesExtendAnimation');
         ShowExample = true;
     }
 
     else {
         for (let i = 0; i < DynamicPosesSectionExample.length; i++) {
 
-            DynamicPosesSectionExample[i].classList.add('DynamicPosesExampleResetAnimation')
-            DynamicPoses.classList.add('DynamicPosesContractAnimation')
+            DynamicPosesSectionExample[i].classList.add('DynamicPosesExampleResetAnimation');
+            DynamicPoses.classList.add('DynamicPosesContractAnimation');
 
             setTimeout(function () {
-                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleStartAnimation')
-                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleResetAnimation')
-                DynamicPoses.classList.remove('DynamicPosesExtendAnimation')
-                DynamicPoses.classList.remove('DynamicPosesContractAnimation')
+                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleStartAnimation');
+                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleResetAnimation');
+                DynamicPoses.classList.remove('DynamicPosesExtendAnimation');
+                DynamicPoses.classList.remove('DynamicPosesContractAnimation');
                 DynamicPosesSectionExample[i].style.display = "none";
-
-            }, 1200)
+            }, 1200);
         }
 
         ShowExample = false;
@@ -366,9 +364,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx = Canvas.getContext("2d");
     // canvas rendering context 2d, for you know, 2d canvas rendering
 
-    const CanvasOffsetX = Canvas.offsetLeft;
-    const CanvasOffsetY = Canvas.offsetTop;
-
     function ResizeCanvas() {
         Canvas.width = window.innerWidth;
         Canvas.height = window.innerHeight;
@@ -399,8 +394,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 ctx.clearRect(0, 0, Canvas.width, Canvas.height); // clear canvas
                 ctx.drawImage(Img, 0, 0); // sets the cleared canvas to previous save state of canvas
 
-                console.log("undo success")
-            }
+                console.log("undo success");
+            };
         }
     }
 
@@ -420,14 +415,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (Event.target.id == "ClearCanvas") {
             ctx.clearRect(0, 0, Canvas.width, Canvas.height);
 
-            console.log("clear canvas success")
+            console.log("clear canvas success");
         }
 
         // undo
         if (Event.target.id == "UndoCanvas") {
             Undo();
 
-            console.log("undo canvas success")
+            console.log("undo canvas success");
         }
         
     });
@@ -437,7 +432,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (Event.target.id == "lineWidth") {
             lineWidth = Event.target.value;
             
-            console.log("brush size change success, lineWidth = ", lineWidth)
+            console.log("brush size change success, lineWidth = ", lineWidth);
         }
 
         if (Event.target.id == "stroke") {
@@ -449,7 +444,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // inputdown define
-    function InputDown(Event) {
+    function InputDown() {
         // undo section
         if (UndoStorage.length >= MaxUndo) {
             UndoStorage.shift(); // remove oldest store in storage
@@ -471,7 +466,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // inputup define
-    function InputUp(Event) {
+    function InputUp() {
         IsDrawing = false;
         ctx.stroke();
         ctx.beginPath();
@@ -480,7 +475,7 @@ document.addEventListener("DOMContentLoaded", function () {
         audio.pause();
         audio.load();
 
-        console.log("canvas mouse is up")
+        console.log("canvas mouse is up");
     }
     // inputup pc + mobile
     Canvas.addEventListener("mouseup", InputUp);
@@ -500,25 +495,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const rect = Canvas.getBoundingClientRect();
 
-        if (window.innerWidth > 800) {
-            const x = Event.clientX - rect.left;
-            const y = Event.clientY - rect.top;
-        }
-
-        else {
-            const x = Event.touches[0].clientX;
-            const y = Event.touches[0].clientY;
-        }
+        const x = Event.clientX - rect.left;
+        const y = Event.clientY - rect.top;
         
-
         ctx.lineTo(1/0.75 * x, 1/0.75 * y); // 1/0.75 because canvas scale is 75%
         ctx.stroke();
 
         console.log("drawing");
         console.log(Event.clientX, "-", rect.left, "=", x);
         console.log(Event.clientY, "-", rect.top, "=", y);
-    }
+    };
     // draw pc + mobile
     Canvas.addEventListener("mousemove", Draw);
     Canvas.addEventListener("touchmove", Draw);
-})
+});
