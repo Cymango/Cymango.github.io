@@ -31,6 +31,33 @@ HamburgerMenuButton.addEventListener("click", toggleMenu);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // human anatomy buttons
 const HumanAnatomySection1Button = document.querySelector("#HumanAnatomySection1Button");
 const HumanAnatomySection2Button = document.querySelector("#HumanAnatomySection2Button");
@@ -131,6 +158,38 @@ setInterval(function () {
         CurrentHumanAnatomySectionImageNumber = 1;
     }
 }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -509,3 +568,160 @@ document.addEventListener("DOMContentLoaded", function () {
     Canvas.addEventListener("mousemove", Draw);
     Canvas.addEventListener("touchmove", Draw);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// reset anchor
+
+const AnchorLinkReset = document.querySelector("#AnchorLinkReset");
+
+
+
+AnchorLinkReset.addEventListener("click", function () {
+    // human anatomy content display reset
+    CurrentHumanAnatomySectionNumber = 1;
+    HumanAnatomySection1.style.display = "block";
+    HumanAnatomySection1.classList.add('HumanAnatomyStartAnimation');
+    HumanAnatomySection2.style.display = "none";
+    HumanAnatomySection2.classList.remove('HumanAnatomyStartAnimation');
+    HumanAnatomySection3.style.display = "none";
+    HumanAnatomySection3.classList.remove('HumanAnatomyStartAnimation');
+
+    // dynamic poses content display reset
+    ShowExample = false;
+    DynamicPosesSection1.style.display = "block";
+    DynamicPosesSection1.classList.add('DynamicPosesStartAnimation');
+    DynamicPosesSection1Button.classList.add('EnabledButton');
+
+    DynamicPosesSection2.style.display = "none";
+    DynamicPosesSection2.classList.remove('DynamicPosesStartAnimation');
+    DynamicPosesSection2Button.classList.remove('EnabledButton');
+
+    // dynamic poses example content display reset
+    for (let i = 0; i < DynamicPosesSectionExample.length; i++) {
+
+            DynamicPosesSectionExample[i].classList.add('DynamicPosesExampleResetAnimation');
+            DynamicPoses.classList.add('DynamicPosesContractAnimation');
+
+            setTimeout(function () {
+                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleStartAnimation');
+                DynamicPosesSectionExample[i].classList.remove('DynamicPosesExampleResetAnimation');
+                DynamicPoses.classList.remove('DynamicPosesExtendAnimation');
+                DynamicPoses.classList.remove('DynamicPosesContractAnimation');
+                DynamicPosesSectionExample[i].style.display = "none";
+            }, 1200);
+        }
+})
