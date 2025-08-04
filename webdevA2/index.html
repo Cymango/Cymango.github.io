@@ -19,6 +19,8 @@
 
 
 <body>
+    <div id="TopAnchor"></div>
+
     <!-- navigation bar at the top -->
     <div class="NavBar">
 
@@ -33,6 +35,8 @@
 
         <!-- links -->
         <ul class="HamburgerMenu">
+            <!-- anchor links from hamburger menu -->
+            <li><a href="#TopAnchor" class="HamburgerMenuItem" id="AnchorLinkReset">Back To Top</a></li>
             <li><a href="#HumanAnatomy" class="HamburgerMenuItem" id="AnchorLink1">Human Anatomy</a></li>
             <li><a href="#DynamicPoses" class="HamburgerMenuItem" id="AnchorLink2">Dynamic Poses</a></li>
             <li><a href="#ColorTheory" class="HamburgerMenuItem" id="AnchorLink3">Color Theory</a></li>
@@ -40,6 +44,7 @@
         </ul>
 
         <button type="button" class="HamburgerMenuButton">
+            <!-- 2 different id's for js event listener -->
             <img src="images/hamburgericon.png" width="36" height="36" alt="Menu" id="HamburgerMenuButtonIconOpen">
             <img src="images/hamburgericon.png" width="36" height="36" alt="Menu" id="HamburgerMenuButtonIconClose">
         </button>
@@ -136,6 +141,7 @@
 
             </div>
 
+            <!-- arrows to swap subtopics -->
             <img src="images/leftarrow.png" width="51" alt="leftarrow" class="HumanAnatomyButton" id="HumanAnatomySection1Button">
             <img src="images/rightarrow.png" width="51" alt="rightarrow" class="HumanAnatomyButton" id="HumanAnatomySection2Button">
 
@@ -168,10 +174,11 @@
 
         <div id="DynamicPosesSections">
 
+            <!-- just a colored background for the topic content -->
             <div id="ColoredBackground"></div>
 
             <!-- Using Real-Life Reference Sources -->
-            <div id="DynamicPosesSection1">
+            <div class="DynamicPosesStartAnimation" id="DynamicPosesSection1">
                 <h2 class="DynamicPosesSectionHeader">Dynamic Poses and Using Real-Life Reference Sources</h2>
 
                 <div class="DynamicPosesSection1MainContent">
@@ -192,6 +199,7 @@
                         viral three Japanese high schoolers posing for google maps serves as a good example for how
                         artists utilise real-life images as reference for dynamic poses.</p>
 
+                    <!-- extra content -->
                     <button type="button" id="DynamicPosesSection1ExampleButton">Examples</button>
                 </div>
 
@@ -217,11 +225,9 @@
             </div>
 
 
-
-            <button type="button" class="EnabledButton" id="DynamicPosesSection1Button">Dynamic Poses and Real-Life
-                References</button>
-            <button type="button" id="DynamicPosesSection2Button">Applying Simplified Body Shapes To Draw Dynamic
-                Poses</button>
+            <!-- button to toggle between subtopics -->
+            <button type="button" class="EnabledButton" id="DynamicPosesSection1Button">Dynamic Poses and Real-Life References</button>
+            <button type="button" id="DynamicPosesSection2Button">Applying Simplified Body Shapes To Draw Dynamic Poses</button>
 
         </div>
 
@@ -245,7 +251,7 @@
 
         <div id="ColorTheorySections">
 
-            <!-- How Will Color Theory Help? -->
+            <!-- How Will Color Theory Help? | subtopic 1 -->
             <div id="ColorTheorySection1">
 
                 <h2 class="ColorTheorySectionHeader">Why Learn Color Theory?</h2>
@@ -261,7 +267,7 @@
 
             </div>
 
-            <!-- Color Palettes -->
+            <!-- Color Palettes | subtopic 2 -->
             <div id="ColorTheorySection2">
 
                 <h2 class="ColorTheorySectionHeader" id="ColorTheorySection2Header">Color Palettes</h2>
@@ -275,6 +281,7 @@
 
             </div>
 
+            <!-- subtopic 2, page 2 -->
             <div id="ColorTheorySection2a">
                 <div id="ColorTheorySection2aMainContent">
                     <img src="images/mikapikazo_60-30-10_color_rule.png" width="488" alt="MikaPikazoColorRule" class="ColorTheorySection2Image" id="ColorTheorySection2Image2">
@@ -289,7 +296,7 @@
                 </div>
             </div>
 
-            <!-- Choosing Your Colors -->
+            <!-- Choosing Your Colors | subtopic 3 -->
             <div id="ColorTheorySection3">
 
                 <h2 class="ColorTheorySectionHeader" id="ColorTheorySection3Header">Choosing Your Colors</h2>
@@ -306,6 +313,7 @@
 
             </div>
 
+            <!-- subtopic 3, page 2 -->
             <div id="ColorTheorySection3a">
 
                 <div id="ColorTheorySection3aMainContent">
@@ -326,6 +334,7 @@
 
             </div>
 
+            <!-- subtopic 3, page 3 -->
             <div id="ColorTheorySection3b">
 
                 <div id="ColorTheorySection3bMainContent">
@@ -419,23 +428,28 @@
 
             <div id="DrawingTools">
                 
-                <h1 id="CanvasTitle">Draw!</h1>
+                <!-- decorative text -->
+                <h1 id="CanvasTitle">Draw!</h1> 
 
+                <!-- brush color change input -->
                 <label for="stroke">Brush Color:</label>
                 <input id="stroke" name="stroke" type="color">
 
+                <!-- brush size change input -->
                 <label for="lineWidth">Brush Size:</label>
                 <input id="lineWidth" name="lineWidth" type="Number" value="5" min="1" max="50">
 
+                <!-- undo/reset buttons -->
                 <button id="UndoCanvas">Undo</button>
                 <button id="ClearCanvas">Reset</button>
 
+                <!-- tooltip for >800px -->
                 <div id="KeyboardUndoTip">Press 'z' to quickly undo!</div>
 
             </div>
 
 
-
+            <!-- you wont guess what this section is for -->
             <div class="Canvas">
                 <canvas id="Canvas"></canvas>
             </div>
@@ -697,6 +711,14 @@
 
 
 
+
+
+
+
+
+
+    
+    
 
 
 
