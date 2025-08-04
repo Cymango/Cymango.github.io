@@ -12,9 +12,6 @@ body {
 .NavBar {
     display: grid;
 
-    /* remake */
-    /* grid-template-rows: auto 22vw; */
-
     /* calc(100vw/852*430) solves for the px height of image at 100vw*/
     grid-template-rows: calc(79vw/852*430) auto;
 
@@ -104,20 +101,24 @@ body {
     z-index: 9999;
 }
 
-#AnchorLink1 {
+#AnchorLinkReset {
     top: 0;
 }
 
-#AnchorLink2 {
+#AnchorLink1 {
     top: 2em;
 }
 
-#AnchorLink3 {
+#AnchorLink2 {
     top: 4em;
 }
 
-#AnchorLink4 {
+#AnchorLink3 {
     top: 6em;
+}
+
+#AnchorLink4 {
+    top: 8em;
 }
 
 #HamburgerMenuButtonIconClose {
@@ -1066,11 +1067,6 @@ button:hover {
 
 
 
-
-
-
-
-
 #CanvasGame {
     background-color: #ebcaa9;
 
@@ -1231,32 +1227,6 @@ Footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* keyframes yippee i love art i love animation put me in agve coach i got this hehaehajakhjsehjskjkj */
 
 @keyframes OpacityFadeInAnimationKeyframes {
@@ -1298,21 +1268,6 @@ Footer {
         height: 130vw
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1767,44 +1722,6 @@ Footer {
     #QRCodeImage {
         display: none;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
